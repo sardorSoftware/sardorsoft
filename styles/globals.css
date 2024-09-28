@@ -1,0 +1,205 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Background and Foreground Colors */
+    --background: 0 0% 96%;
+    /* Bright white for light mode */
+    --foreground: 240 10% 12%;
+    /* Very dark gray for readability */
+
+
+    /* Card and Popover Backgrounds */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    /* Primary Colors */
+    --primary: 220 90% 56%;
+    /* Vibrant blue for primary elements */
+    --primary-foreground: 0 0% 100%;
+    /* White text on primary backgrounds */
+
+    /* Secondary Colors */
+    --secondary: 200 80% 75%;
+    /* Soft blue for secondary elements */
+    --secondary-foreground: 240 10% 10%;
+    /* Darker foreground for secondary components */
+
+    /* Muted Colors */
+    --muted: 240 4.8% 95.9%;
+    /* Light gray for muted backgrounds */
+    --muted-foreground: 240 3.8% 46.1%;
+    /* Gray for muted text */
+
+    /* Accent Colors */
+    --accent: 340 80% 55%;
+    /* Vibrant red for accents (e.g., active states) */
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive Colors */
+    --destructive: 0 62.8% 50.6%;
+    /* Red for destructive actions */
+    --destructive-foreground: 0 0% 100%;
+
+    /* Border and Input Colors */
+    --border: 240 5.9% 80%;
+    /* Softer gray for borders */
+    --input: 240 5.9% 90%;
+    /* Light gray for inputs */
+
+    /* Focus Rings */
+    --ring: 240 10% 3.9%;
+
+    /* Custom Chart Colors */
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+
+    /* Border Radius */
+    --radius: 0.5rem;
+  }
+
+  /* Dark Mode Color Scheme */
+  .dark {
+    --background: 240 10% 12%;
+    /* Dark gray background for dark mode */
+    --foreground: 0 0% 96%;
+    /* Soft white for dark mode */
+
+    /* Card and Popover in Dark Mode */
+    --card: 240 12% 12%;
+    /* Darker card background */
+    --card-foreground: 0 0% 100%;
+    --popover: 240 10% 15%;
+    /* Slightly lighter than background */
+    --popover-foreground: 0 0% 98%;
+
+    /* Dark Mode Primary Colors */
+    --primary: 220 90% 60%;
+    /* Brighter blue for primary elements */
+    --primary-foreground: 0 0% 100%;
+
+    /* Dark Mode Secondary Colors */
+    --secondary: 200 80% 70%;
+    /* Slightly softer secondary */
+    --secondary-foreground: 240 10% 98%;
+
+    /* Dark Mode Muted Colors */
+    --muted: 240 7% 20%;
+    /* Muted dark backgrounds */
+    --muted-foreground: 240 6% 75%;
+    /* Light gray text on muted backgrounds */
+
+    /* Dark Mode Accent Colors */
+    --accent: 340 70% 60%;
+    /* Rich red for accents */
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive Colors in Dark Mode */
+    --destructive: 0 80% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Dark Mode Border and Input Colors */
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+
+    /* Focus Rings */
+    --ring: 240 10% 60%;
+
+    /* Chart Colors */
+    --chart-1: 220 70% 50%;
+    /* Deep blue */
+    --chart-2: 160 60% 45%;
+    /* Greenish tone */
+    --chart-3: 30 80% 55%;
+    /* Yellow */
+    --chart-4: 280 65% 60%;
+    /* Violet */
+    --chart-5: 340 75% 55%;
+    /* Red */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .card {
+    @apply bg-card text-card-foreground shadow-lg rounded-lg p-4;
+  }
+
+  .dark .card {
+    @apply bg-card text-card-foreground shadow-lg;
+  }
+}
+
+
+@layer utilities {
+
+  /* Example: Utility for custom padding */
+  .p-7 {
+    padding: 1.75rem;
+    /* Custom padding utility */
+  }
+
+  /* Example: Custom background blur */
+  .bg-blur {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Light translucent background */
+  }
+
+  /* Example: Custom text shadow */
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle text shadow */
+  }
+
+  /* Example: Custom border radius */
+  .rounded-xl {
+    border-radius: 1rem;
+  }
+
+  /* Example: Custom gradient */
+  .bg-gradient-custom {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  }
+
+  /* Example: Custom max-width */
+  .max-w-screen-xl {
+    max-width: 1440px;
+  }
+
+  /* Example: Custom opacity */
+  .opacity-85 {
+    opacity: 0.85;
+  }
+
+  /* Example: Custom text size */
+  .text-lg-custom {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  /* Example: Custom shadow for buttons */
+  .btn-shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
