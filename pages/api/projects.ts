@@ -23,7 +23,7 @@ const projects = [
     description:
       'An elegant portfolio website created with Next.js and Shadcn UI, showcasing a collection of projects and experiences. This site emphasizes modern design principles and responsive layouts, ensuring a captivating user experience.',
     image: '/portfolio.png',
-    link: 'project-three',
+    link: 'https://sardorsoftware.vercel.app/',
   },
 ];
 
